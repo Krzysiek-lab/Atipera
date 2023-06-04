@@ -17,7 +17,6 @@ import java.util.Set;
 @Service
 public interface GitService {
     ResponseEntity<Object> repositories(String header, String userName);
-
     default Set<GitRepository> getRepositories(String header, String userName) throws IOException {
         URL url = new URL("https://api.github.com/users/" + userName + "/repos");
         StringBuilder jsonObject = getStringBuilder(header, url);

@@ -1,8 +1,8 @@
-package com.example.apitera.service;
+package com.example.atipera.service;
 
-import com.example.apitera.interfaces.GitService;
-import com.example.apitera.mapper.GitMapper;
-import com.example.apitera.model.GitRepository;
+import com.example.atipera.interfaces.GitService;
+import com.example.atipera.mapper.GitMapper;
+import com.example.atipera.model.GitRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

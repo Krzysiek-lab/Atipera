@@ -1,6 +1,6 @@
-package com.example.apitera.controller;
+package com.example.atipera.controller;
 
-import com.example.apitera.interfaces.GitService;
+import com.example.atipera.interfaces.GitService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;

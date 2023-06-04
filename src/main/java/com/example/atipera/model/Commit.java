@@ -1,4 +1,4 @@
-package com.example.apitera.model;
+package com.example.atipera.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;

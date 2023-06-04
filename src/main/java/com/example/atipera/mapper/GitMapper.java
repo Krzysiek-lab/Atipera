@@ -1,6 +1,6 @@
-package com.example.apitera.mapper;
+package com.example.atipera.mapper;
 
-import com.example.apitera.dto.Response;
+import com.example.atipera.dto.Response;
 import org.springframework.stereotype.Service;
 
 @Service

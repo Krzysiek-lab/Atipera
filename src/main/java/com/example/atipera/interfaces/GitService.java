@@ -1,7 +1,7 @@
-package com.example.apitera.interfaces;
+package com.example.atipera.interfaces;
 
-import com.example.apitera.model.Branch;
-import com.example.apitera.model.GitRepository;
+import com.example.atipera.model.Branch;
+import com.example.atipera.model.GitRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

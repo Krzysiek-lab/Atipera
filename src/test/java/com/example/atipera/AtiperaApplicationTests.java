@@ -1,10 +1,10 @@
-package com.example.apitera;
+package com.example.atipera;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApiteraApplicationTests {
+class AtiperaApplicationTests {
 
     @Test
     void contextLoads() {

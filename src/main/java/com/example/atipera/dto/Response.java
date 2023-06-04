@@ -1,4 +1,4 @@
-package com.example.apitera.dto;
+package com.example.atipera.dto;
 
 import lombok.Builder;
 import lombok.Getter;

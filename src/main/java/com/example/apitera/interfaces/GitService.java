@@ -46,7 +46,7 @@ public interface GitService {
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         urlConnection.setRequestMethod("GET");
         urlConnection.setRequestProperty(arr[0], arr[1]);
-        urlConnection.setRequestProperty("Authorization", "Bearer " + "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"); // nalezy podac token
+//        urlConnection.setRequestProperty("Authorization", "Bearer " + "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"); // nalezy podac token
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
         StringBuilder jsonObject = new StringBuilder();
         String line;

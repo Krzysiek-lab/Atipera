@@ -1,0 +1,8 @@
+springdoc:
+  show-actuator: true
+  default-produces-media-type: application/json
+  default-consumes-media-type: application/json
+  swagger-ui:
+    tagsSorter: alpha
+    disable-swagger-default-url: true
+    path: /swagger-ui

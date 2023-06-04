@@ -17,6 +17,7 @@ import java.util.Set;
 @Service
 public interface GitService {
     ResponseEntity<Object> repositories(String header, String userName);
+
     default Set<GitRepository> getRepositories(String header, String userName) throws IOException {
         URL url = new URL("https://api.github.com/users/" + userName + "/repos");
         StringBuilder jsonObject = getStringBuilder(header, url);
@@ -45,7 +46,7 @@ public interface GitService {
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         urlConnection.setRequestMethod("GET");
         urlConnection.setRequestProperty(arr[0], arr[1]);
-        urlConnection.setRequestProperty("Authorization", "Bearer " + "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"); // wygaśnie za 30 dni pozwala na dostep do prywatnych repozytoriów (nie wiem czy powinienem byl podawac)
+        urlConnection.setRequestProperty("Authorization", "Bearer " + "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"); // nalezy podac token
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
         StringBuilder jsonObject = new StringBuilder();
         String line;

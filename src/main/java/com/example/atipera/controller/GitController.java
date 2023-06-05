@@ -19,7 +19,7 @@ public class GitController {
     @GetMapping
     public ResponseEntity<Object> allRepositories(@RequestParam() @Valid @NotEmpty String userName,
                                                                @RequestParam(defaultValue = "Accept: application/json") String header) {
-        return GitServiceImpl.repositories(header, userName);
+        return gitServiceImpl.repositories(header, userName);
     }
 }
 

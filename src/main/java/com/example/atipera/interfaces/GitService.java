@@ -18,7 +18,8 @@ import java.util.Set;
 @Service
 public interface GitService {
     ResponseEntity<Object> repositories(String header, String userName);
-    //tu najlepiej skorzystac z dependency injection czyli zamiast tworzyc w metodach obiekty przez new() to wstrzyknac je w serwisie i pidac do tych metod jako parametry, tu oczywiscie nie wstrzykne jesli chce by bly
+    //tu najlepiej skorzystac z dependency injection czyli zamiast tworzyc w metodach obiekty przez new() to wstrzyknac je 
+    //w serwisie i pidac do tych metod jako parametry, tu oczywiscie nie wstrzykne jesli chce by bly
     //prywatne pola, oczywiscie najpierw musze stworzyc beany z tych obiektow poprzez metody z @Bean
     default Set<GitRepository> getRepositories(String header, String userName) throws IOException {
         URL url = new URL("https://api.github.com/users/" + userName + "/repos");

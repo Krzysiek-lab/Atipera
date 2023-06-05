@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("git/")
 @AllArgsConstructor
 public class GitController {
-    private final GitService GitServiceImpl;
-
+    private final GitService gitServiceImpl;
+    //lepiej nie zwracac ResponseEntity z Object bo wtedy uzywanie generyka jest tu bez sensu
     @GetMapping
     public ResponseEntity<Object> allRepositories(@RequestParam() @Valid @NotEmpty String userName,
                                                                @RequestParam(defaultValue = "Accept: application/json") String header) {

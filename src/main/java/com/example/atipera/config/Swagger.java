@@ -14,4 +14,6 @@ public class Swagger {
                         .title("Atipera")
                         .description("Zadanie próbne"));
     }
+    //tu najlepiej stworzy metody zwracajace beany z ObjectMapperem, StrinBuilserem i
+    //innych ktorych uzywam
 }

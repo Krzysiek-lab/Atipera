@@ -30,14 +30,13 @@ public class GitServiceImpl implements GitService {
         }
         var opt = Optional.ofNullable(response);
         if (Objects.equals(header, "Accept: application/xml")) {
-            var res = mapper.badHeader(HttpStatus.resolve(406).value(), "Wrong header value");
+            var res = mapper.incorrectHeaderMapper(HttpStatus.resolve(406).value(), "Wrong header value");
             return new ResponseEntity<>(res, HttpStatus.valueOf(406));
         } else if (!opt.isPresent() || opt.get().isEmpty()) {
-            var res = mapper.noUser(HttpStatus.resolve(404).value(), "No repository with given user: " + userName);
+            var res = mapper.noUserMapper(HttpStatus.resolve(404).value(), "No repository with given user: " + userName);
             return new ResponseEntity<>(res, HttpStatus.valueOf(404));
         } else {
             return new ResponseEntity<>(opt.get(), HttpStatus.OK);
         }
     }
 }
-//TODO ZROBIC README I ZROBIC REFACTOR

@@ -6,6 +6,6 @@ import lombok.Getter;
 @Builder
 @Getter
 public class Response {
-    Integer code;
-    String message;
+    private Integer code;
+    private String message;
 }

@@ -12,7 +12,6 @@ public class Swagger {
         return new OpenAPI()
                 .info(new Info()
                         .title("Atipera")
-                        .version("v0.0.1")
                         .description("Zadanie próbne"));
     }
 }

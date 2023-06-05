@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -23,14 +24,14 @@ public interface GitService {
         StringBuilder jsonObject = getStringBuilder(header, url);
         ObjectMapper objectMapper = new ObjectMapper();
         var repos = objectMapper.readValue(String.valueOf(jsonObject), GitRepository[].class);
-        for (GitRepository repository : repos) {
+        Arrays.asList(repos).forEach(e -> {
             try {
-                var res = getBranchesForAllRepositories(header, userName, repository.getName());
-                repository.setBranchSet(res);
+                var res = getBranchesForAllRepositories(header, userName, e.getName());
+                e.setBranchSet(res);
             } catch (IOException ex) {
                 throw new RuntimeException(ex);
             }
-        }
+        });
         return Set.of(repos);
     }
 
@@ -46,7 +47,7 @@ public interface GitService {
         HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
         urlConnection.setRequestMethod("GET");
         urlConnection.setRequestProperty(arr[0], arr[1]);
-//        urlConnection.setRequestProperty("Authorization", "Bearer " + "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"); // nalezy podac token
+//        urlConnection.setRequestProperty("Authorization", "Bearer " + "tu token"); // TODO należy podać token
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(urlConnection.getInputStream()));
         StringBuilder jsonObject = new StringBuilder();
         String line;

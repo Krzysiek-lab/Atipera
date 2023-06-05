@@ -12,7 +12,5 @@ import java.util.Set;
 public class GitRepository {
     private String name;
     private Owner owner;
-
-    //czy tak zadziala?
     private Set<Branch> branchSet;
 }

@@ -19,7 +19,7 @@ import java.util.Set;
 @SuppressWarnings("all")
 public class GitServiceImpl implements GitService {
     private final GitMapper mapper;
-
+    // tez nie zwracac geneykow z Object
     @Override
     public ResponseEntity<Object> repositories(String header, String userName) {
         Set<GitRepository> response = new HashSet<>();
